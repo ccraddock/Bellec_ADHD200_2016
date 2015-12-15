@@ -1,0 +1,278 @@
+%%
+%% Copyright 2007, 2008, 2009 Elsevier Ltd
+%%
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%%
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%%
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%%
+
+%% Template article for Elsevier's document class `elsarticle'
+%% with numbered style bibliographic references
+%% SP 2008/03/01
+%%
+%%
+%%
+%% $Id: elsarticle-template-num.tex 4 2009-10-24 08:22:58Z rishi $
+%%
+%%
+\documentclass[preprint,12pt,1p]{elsarticle}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn]{elsarticle}
+%% \documentclass[final,3p,times]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn]{elsarticle}
+%% \documentclass[final,5p,times]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn]{elsarticle}
+
+%% if you use PostScript figures in your article
+%% use the graphics package for simple commands
+%% \usepackage{graphics}
+%% or use the graphicx package for more complicated commands
+%% \usepackage{graphicx}
+%% or use the epsfig package if you prefer to use the old commands
+%% \usepackage{epsfig}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+\usepackage{url}
+
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers after \end{frontmatter}.
+%% \usepackage{lineno}
+
+%% natbib.sty is loaded by default. However, natbib options can be
+%% provided with \biboptions{...} command. Following options are
+%% valid:
+
+%%   round  -  round parentheses are used (default)
+%%   square -  square brackets are used   [option]
+%%   curly  -  curly braces are used      {option}
+%%   angle  -  angle brackets are used    <option>
+%%   semicolon  -  multiple citations separated by semi-colon
+%%   colon  - same as semicolon, an earlier confusion
+%%   comma  -  separated by comma
+%%   numbers-  selects numerical citations
+%%   super  -  numerical citations as superscripts
+%%   sort   -  sorts multiple citations according to order in ref. list
+%%   sort&compress   -  like sort, but also compresses numerical citations
+%%   compress - compresses without sorting
+%%
+%% \biboptions{comma,round}
+
+\biboptions{sort&compress}
+
+
+\journal{Neuroimage}
+
+\begin{document}
+
+
+
+\begin{frontmatter}
+
+\title{The ADHD200 preprocessed experiment:\\lowering the barriers to a neuroimaging competition}
+
+%\tnotetext[label0]{This is only an example}
+
+
+\author[label0,label1,label2]{Pierre Bellec\corref{cor1}}
+\address[label0]{The Neuro Bureau Research Institute, Leipzig, Germany}
+\address[label1]{Centre de Recherche de l'Institut Universitaire de G\'eriatrie de Montr\'eal, Montr\'eal, CA}
+\address[label2]{D\'epartement d'Informatique et de Recherche Op\'erationnelle, Universit\'e de Montr\'eal, Montr\'eal, CA}
+
+\cortext[cor1]{Corresponding authors.}
+
+\ead{pierre.bellec@criugm.qc.ca}
+\ead[url]{bellec.simexp-lab.org}
+
+\author[label0,label3]{Carlton Chu}
+\address[label3]{Deep Mind, London, UK}
+\ead{carltonchu1@gmail.com}
+
+\author[label0,label1,label4]{Fran\c{c}ois Chouinard-Descortes}
+\address[label4]{McGill University, Montreal, CA}
+\ead{carltonchu1@gmail.com}
+
+\author[label0,label5]{Daniel S. Margulies}
+\address[label5]{Max Planck Insitute, Leipzig, GER}
+5\ead{daniel.margulies@gmail.com}
+
+\author[label0,lab6,lab7]{R. Cameron Craddock\corref{cor1}}
+\address[lab6]{Computational Neuroimaging Laboratory, Center for Biomedical Imaging and Neuromodulation, Nathan S. Kline Institute for Psychiatric Research, Orangeburg, NY, USA}
+\address[lab7]{Center for the Developing Brain, Child Mind Institute, New York, NY, USA}
+\ead{ccraddock@nki.rfmh.org}
+\ead[url]{computational-neuroimaging-lab.org}
+
+\begin{abstract}
+Text of abstract. Text of abstract. Text of abstract. Text of abstract. Text of abstract. 
+\end{abstract}
+
+\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+preprocessed fMRI, data sharing, neuroimaging competition
+\end{keyword}
+
+\end{frontmatter}
+
+%%
+%% Start line numbering here if you want
+%%
+% \linenumbers
+
+\section{Introduction}
+
+In 2011, the ``ADHD-200 Global Competition'' was held with the aim of engaging researchers from a variety of analytical backgrounds to identify biomarkers of attention deficit hyperactivity disorder (ADHD) from resting-state functional magnetic resonance imaging (R-fMRI) data \cite{Milham2012}. The competition made use of the ``ADHD-200 Sample'' data collection that was aggregated from eight independent studies and shared through the Intenational Neuroimaging Datasharing Initiative (INDI) \cite{Mennes2013}. The data includes R-fMRI, structural MRI (sMRI), and basic phenotypic information for 973 individuals (554 TDC, 419 ADHD) \cite{Milham2012}. Competitors were given five and a half months to optimize a classification algorithm on training data (776 individuals) and submit their predicted clinical labels for test data for which diagnostic information was withheld. The competition data was distributed in a raw form and before any analysis could begin, had to be preprocessed to make it comparable across individuals and to remove nuisance variation that would obscure the underlying biological signal. These preprocessing steps present a significant hurdle for would-be competitors who do not have the specialist knowledge of neuroimaging methods or access to the high performance computing resources required to process such a large data collection in a short amount of time. Realizing this barrier to entry for  statisticians and computer scientists, who were potentially the most qualified for the machine learning aspect of the competition, the Neuro Bureau prospectively collaborated with all competitors by preprocessing the data and sharing these results.
+
+The ``ADHD-200 Preprocessed'' is a repository of preprocessed R-fMRI and sMRI data along with statistical derivatives from the ADHD-200 Sample. Rather than favoring a specific processing strategy, we followed a pluralistic approach by preprocessing the data using multiple pipelines (called ``Athena'', ``Burner'' and ``NIAK'') that differed in toolsets used, the philosophy motivating choices of algorithms and parameters, and the statistical derivatives calculated. The Athena pipeline processing R-fMRI and sMRI images using a custom BASH script that combines functionality from AFNI \cite{Cox1996} and FSL \cite{Smith2004} neuroimaging toolkits. The Burner pipeline used SPM8 \cite{ashburner} to process sMRI data for voxel-based morphometry style analyses. The NIAK pipeline was implemented using tools from the neuroimaging analysis kit (NIAK) \cite{bellecNIAK} pipelined together using the Pipeline System for Octave and Matlab (PSOM) \cite{slcPSOM} to process both sMRI and R-fMRI datasets. The results from the pipelines are shared on the Neuro Bureau project page at the Neuroimaging Informatics Tools and Resources Clearinghouse (NITRC)\footnote{\url{http://www.nitrc.org/frs/?group_id=383}}. The data was used by several teams who competed in the ADHD-200 Global Competition, including the winning entry by a group of biostaticians with limited prior neuroimaging experience \cite{Eloyan2012}. The initiative has had an significant impact beyond the competition, having been used in 49 publications \cite{Rangarajan2014, Liang2012, Tabas2014, Rangarajan2015, Mahanand2013, Lifshitz2012, Fujita2013, Ji2011, Li2015, Li2013, Liu2012, DosSantosSiqueira2014, Olivetti2014, Han2015, Wang2013a, Subramanian2013, Dey2014, Bellec2012, Bohland2012, Chang2012, Cheng2012, Colby2012, Dai2012, Dey2012, Eloyan2012, Olivetti2012, Sato2012a, Carmona2015, Carmona2015a, Hou2015, Deshpande2015, She2014, Lavoie-Courchesne2012b, Chen2015, Nunez-Garcia2015, Solmaz2012, Anderson2014, KadkhodaeianBakhtiari2012, Sato2013, Kyeong2015, Sato2012, Takahashi2012, He2013, Kong2013, Yao2013, Yang2015, Ahn2015, Fujita2014, Reiss2014}, three PhD theses \cite{Colby2012a, Dey2013, Zhang2012}, three master's dissertations \cite{VanGalenLast2011, Vidal2014, Wang2013} and one patent \cite{Dey2013} in just over 3 years, with more in press or under review.
+
+\section{Contents of the repository}
+
+The ADHD-200 preprocessed data was released in the summer of 2012 and can be downloaded from NITRC\footnote{\url{http://www.nitrc.org/frs/?group_id=383}}. No data usage agreement is required to access or download the data, the only requirement is registering for a free NITRC account. This registration enables downloads to be tracked for usage statistics and so that users can be contacted in the event that errors are found. The ADHD-200 Sample allows unrestricted data usage for non-commercial research purposes provided that the specific datasets included in an analysis be cited appropriately and that their funding sources be acknowledged\footnote{\url{http://fcon_1000.projects.nitrc.org/indi/adhd200/}}. There are no more restrictions placed on the preprocessed data or derivatives other than the request that the ADHD-200 Preprocessed Initiative is cited appropriately and that the specific pipeline is acknowledged in publications using the data. A forum is available on the Neuro Bureau's NITRC project page for users to ask questions or report
+problems\footnote{\url{http://www.nitrc.org/forum/forum.php?forum_id=2046}}. Questions regarding data acquisition or phenotypic variables should be directed to INDI's support forum\footnote{\url{http://www.nitrc.org/forum/forum.php?forum_id=1735}}. 
+\par
+ADHD-200 Preprocessed data is available as a collection of compressed tar files that are organized by pipeline, sites of data collection, training and test samples, as well as by derivative. The following preprocessed derivatives are available.
+
+\begin{table}[!ht]
+\caption{{\bf Summary of ADHD-200 data by site.}}\label{part_tab}
+  \begin{tabular}{L{.1in}L{.1in}L{1.1in}L{1.1in}L{1.1in}L{.7in}}
+    \hline
+	\\
+    \multicolumn{3}{l}{\textbf{Bradley Hostpital/Brown University}} & & \\
+    & \multicolumn{4}{l}{\emph{Scanner:} Siemens TIM Trio 3T}\\
+    & \multicolumn{5}{l}{\emph{sMRI:} 3D MPRAGE, FA = 9$^{\circ}$, TR = 2250 ms, TE = 2.98 ms,}\\
+    & &  \multicolumn{3}{l}{TI = 900 ms, $1\times1\times1$ mm$^3$} \\
+    & \multicolumn{4}{l}{\emph{R-fMRI:} EPI w/ prospective motion correction (PACE), FA = 9$^{\circ}$,}\\
+    & & \multicolumn{4}{l}{TR = 2000 ms, TE = 25 ms, 35 3-mm thick slices, $3.0 \times 3.0$ mm$^2$}\\
+    & & \multicolumn{4}{l}{in-plan resolution. Participants were asked to relax with their eyes}\\
+    & & \multicolumn{4}{l}{open and fixate on the text ``relax'' that was projected on a screen.}\\
+    & \multicolumn{2}{l}{\emph{TDC}:} 27, 
+    %& \multicolumn{4}{l} \emph{T1 weighted anatomical scans:}  
+	\hline
+	\end{tabular}
+\end{table}
+
+
+
+\subsection{The Athena and NIAK pipelines}
+
+\paragraph{Preprocessed sMRI and R-fMRI} Both the Athena and NIAK pipelines released denoised R-fMRI volumes resampled into a reference, stereotaxic space (variants of the MNI template) as compressed 4D nifti files (.nii.gz). Transformations from native to stereotaxic space for each dataset were released in separate files, in FSL .xfm transform files for Athena and in .xfm MINC files for NIAK. In addition, the estimated motion parameters (bundled with additional intermediate outputs) were released in separate archives, inside text files (AFNI .1D tab-separated-value files) for Athena, and inside Matlab HDF5 files for NIAK. 
+
+
+\paragraph{Regional time series} Regional time series were extracted based on a series of different brain parcellations. The Athena ppipeline used functional parcels generated by a spectral clustering method (Craddock et al. 2012) as well as a number of parcellations established from anatomical landmarks, with a resolution ranging from 93 to 351 parcels. The NIAK pipeline only used functional parcels generated by a region growing method (Bellec et al. 2006) with two resolutions: 954 and 2843 parcels. The Athena pipeline distributed regional time series as text files (.1D AFNI) and the NIAK distributed them as HDF5 files (.mat Matlab). All brain parcellations were also released as compressed nifti files (.nii.gz). Note that the phenotypic information of the ADHD200 sample was also released as comma-separated-values files (.csv). 
+
+\paragraph{Other derivatives}
+The Athena pipeline derived a number of additional metrics from the preprocessed fMRI datasets: fractional amplitude of low frequency fluctuations (fALFF) maps, regional homogeneity (ReHO) maps and dual-regression based on the (Smith et al. 2009) group independent component analysis (ICA) with 10 resting-state networks. One compressed nifti file (.nii.gz) was released per fMRI dataset and type of derivative, with in addition the time courses of the dual regression available in text files (.1D AFNI).
+
+\subsection{The Burner pipeline}
+
+The Burner pipeline included a segmentation of the grey matter of the structural scans, after a non-linear transformation in stereotaxic space was generated by the DARTEL tool from SPM8. Note that this release was purely based on structural MRI, and did not include any fMRI derivatives. This pipeline was specifically oriented towards a voxel-based-morphometry analysis of the ADHD200 sample, which could be used as a complement of the functional analysis perfomed with the two other pipelines. 
+
+
+\section{Processing strategies}
+
+\subsection{Preprocessed sMRI and R-fMRI}
+% http://onlinelibrary.wiley.com/doi/10.1002/hbm.22790/epdf
+\paragraph{The Athena pipeline} The preprocessing steps of functional MRI datasets included removal of the first four volumes to allow for magnetization to reach equilibrium, slice timing correction, motion correction, normalization to MNI152 standard space at 4 mm isotropic voxel resolution, regression of nuisance covariates including head motion parameters, global mean, white matter, and cerebrospinal ﬂuid signals, band-pass filtering of fMRI ($0.009 Hz < f < 0.08 Hz$) to reduce low-frequency drift and high-frequency physiological noise, and finally spatial smoothing with a 6 mm full-width-at-half-maximum isotropic Gaussian kernel. 
+
+\paragraph{The NIAK pipeline} The preprocessing steps followed those of the Athena pipeline with the following differences: (1) only the first three volumes were suppressed, instead of four; (2) only a high-pass filter was implemented ($0.009 Hz < f$), instead of a band pass, and no regression of confounds such as motion parameters, global average, etc. Instead, a physiological noise correction based on automatic labeling of ICA components was implemented \citep{Perlbarg2007}. The fMRI volumes were resampled in stereotaxic space at 3 mm isotropic (instead of 4 mm), and this was done only right before spatial smoothing. Finally note that although both Athena and NIAK used the MNI non-linear stereotaxic template space described in \citep{Fonov2011}, the NIAK used the young adult (ICBM152) symmetric variant, while Athena used the NIHPD asymmetric pediatric template (4.5 y.o.-18.5 y.o.).  
+
+\subsection{Regional time series}
+
+For both Athena and NIAK, regional time series were extracted by averaging preprocessed resting-state volumes within different brain regions. The Athena pipeline first used a series of anatomical templates:
+\begin{itemize}
+\item The automated anatomical labeling (AAL) template \citep{Tzourio-Mazoyer} 
+\item The Eickhoff-Zilles (EZ) [8]
+\end{itemize}
+, , Talairach and Tournoux (TT) [9], and Harvard-Oxford (HO) anatomical atlases. In addition,  as well as, 200 (CC200) and 400 (CC400) ROI atlases derived from functionally parcellating the resting state data [10]. The AAL atlas is distributed with the AAL Toolbox. The atlas was fractionated into functional space using nearest-neighbor interpolation.
+The EZ atlas was derived from the max-propagation atlas distributed with the SPM Anatomy Toolbox. The atlas was transformed into template space using the Colin 27 template (also distributed with the toolbox) as an intermediary and fractionated into functional space using nearest-neighbor interpolation.
+The HO atlas distributed with FSL is split into cortical and subcortical probabilistic atlases. A 25\% threshold was applied to each of these atlases and they were subsequently bisected into left and right hemispheres at the midline (x=0). ROIs representing left/right WM, left/right GM, left/right CSF and brainstem were removed from the subcortical atlas. The subcortical and cortical ROIs were combined and then fractionated into functional space using nearest-neighbor interpolation.
+The TT atlas distributed with AFNI was coregistered and warped into template space and subsequently fractionated into functional space using nearest neighbor interpolation.
+\par
+Functional parcellation was accomplished using the two-stage spatially-constrained functional procedure described in [10]. Preprocessed and unfiltered resting state data corresponding to 650 subjects with the cleanest data (as determined by registration quality and applying a max translation < 3mm and max rotation < 3 degrees). A grey matter mask was constructed for the subjects by averaging grey matter masks derived from freesurfer automated segmentation. Subject specific connectivity graphs were constructed by treating each withen-gm-mask voxel as a node and edges corresponding to super-threshold temporal correlations to the voxels' 3D (27 voxel) neighborhood. Each subjects' graph was partitioned into 200 or 400 regions using normalized cut spectral clustering. Association matrices were constructed from the clustering results by setting the connectivity between voxels to 1 if they are in the same ROI and 0 otherwise. A group-level correspondance matrix was constructed by averaging the individual level association matrices and subsequently partitioned into 200 or 400 regions using normalized cut clustering.
+\par 
+Regional homogeneity was calculated for the preprocessed and filtered whole brain resting state data using the procedure described in [11]. The scripts used to calculate ReHo were generously provided by Dr. Xinian Zuo. 
+\par 
+The FC maps for the Smith PNAS 2009 RSNs were constructed using a modified dual regression approach. I used a spatial multiple regression to extract time courses corresponding to spatial templates of the 10 Smith PNAS 2009 RSNs, and then independently correlated each of the 10 time courses with whole brain data to generate subject-specific FC maps for each RSN. Dr. Steve Smith suggested that instead of using univariate correlation to generate the FC maps, that I use multiple regression instead. These files are the result of that analysis.
+
+\subsection{The Burner Pipeline}
+Details on the Burner pipeline can be found on the NITRC website\footnote{\url{http://www.nitrc.org/plugins/mwiki/index.php/neurobureau:NiakPipeline}}.
+T1 images were segmented into grey matter and white matter probability maps using "New Segmentation" in SPM8. The tissue maps were rigidly aligned (translation+rotation). Inter subject normalization was performed using DARTEL toolbox in SPM8. Images were iteratively registered to the group average (population template), and template was updated iteratively. This resulted finer and finer registration. The registration parameters were applied to each image to transform each image into the space of population average. Modulation was applied to conserve the global tissue volumes after normalization.
+
+\subsection{The NIAK pipeline}
+Details on the NIAK pipeline can be found on the NITRC website.
+
+% http://www.nitrc.org/plugins/mwiki/index.php/niak:FmriPreprocessing064#Summary_of_the_pipeline
+
+% Add a few words on the generation of the regions and extraction of regional time series. 
+To reduce the computational burden of the analysis, the spatial dimension of the individual fMRI dataset was reduced using a region-growing algorithm. The spatial dimension was selected arbitrarily by setting the size where the growing process stopped (a threshold of 1000 mm3 resulted into R=957 regions). The regions were built to maximize the homogeneity of the time series within the region, i.e. the average correlation between the time series associated with any pair of voxels of the region. The region growing was applied on the time series concatenated across all subjects (after correction to zero mean and unit variance), such that the homogeneity was maximized on average for all subjects, and the small homogeneous regions are identical for all subjects. Because of the temporal concatenation of time series, we had to limit the memory demand, and the region-growing was thus applied independently in each of the 116 areas of the AAL template \citep{Tzourio-Mazoyer2002}. See (Bellec et al. 2006) for more details regarding the implementation of the region-growing algorithm. Overall, this process reduced the dataset of each subject into a (T x R) data array, where T is the number of time samples and R is the number of regions.
+
+\section{Quality control}
+
+The Athena pipeline did suggest a number of automated metrics to guide quality controls, but left to end users the task of checking individual data. The output of the Burner pipeline were visually inspected by Dr Chu. The individual results of the NIAK pipeline were visually reviewed for quality of the registration of fMRI and sMRI data as well as registration of sMRI data in stereotaxic space. The quality control report also included metrics of individual motion and recommendation for subjects to exclude on the basis of excessive motion. 
+
+\emph{We need to mention the forum, give examples of the identification of bugs as well as the release of bug fixes (and problems that came with it because of the way we released the data). This has to be kept brief, it's not super exciting, but it is part of the guidelines of the special issue.}
+
+\section{Lessons learned and future work}
+
+The ADHD200 preprocessed initiative was a success in terms of its primary objective: the data repository was effectively used by many researchers during and after the ADHD200 competition, with over 9,500 downloads by more than 490 users.  In the short time since their release, these statistical derivatives have already been used to generate 49 publications \cite{Rangarajan2014, Liang2012, Tabas2014, Rangarajan2015, Mahanand2013, Lifshitz2012, Fujita2013, Ji2011, Li2015, Li2013, Liu2012,     DosSantosSiqueira2014, Olivetti2014, Han2015, Wang2013a, Subramanian2013, Dey2014, Bellec2012, Bohland2012, Chang2012, Cheng2012, Colby2012, Dai2012, Dey2012, Eloyan2012, Olivetti2012, Sato2012a, Carmona2015, Carmona2015a, Hou2015, Deshpande2015, She2014, Lavoie-Courchesne2012b, Chen2015, Nunez-Garcia2015, Solmaz2012, Anderson2014, KadkhodaeianBakhtiari2012, Sato2013, Kyeong2015, Sato2012, Takahashi2012, He2013, Kong2013, Yao2013, Yang2015, Ahn2015, Fujita2014, Reiss2014}, three PhD theses \cite{Colby2012a, Dey2013, Zhang2012} and three master's dissertations \cite{VanGalenLast2011, Vidal2014, Wang2013} and one patent \cite{Dey2013} in just over 3 years, with more in press or under review. An important feature of the ADHD200 preprocessed initiative was that the regional time series took the form of time x space arrays easy to manipulate for any data scientist, even without a background in imaging. As a result, the publications using ADHD200 preprocessed include articles published in journals outside of the the neuroimaging field, e.g. \citep{}. In particular, the winning team of the ADHD200 global competition was based at the Johns Hopkins Biostatistics Department and used ADHD200 preprocessed to develop their diagnostic algorithm \cite{Eloyan2012}.
+\par 
+In terms of its secondary objective, almost all variants of processing strategies included in the ADHD200 release have been used in subsequent analysis, although with markedly different rates of re-use. The most popular pipeline by far has been Athena. \emph{... we need a specific breackdown for this ... I'll prepare a table}. No publication we are aware of actually implemented a face-to-face comparison between processing techniques. The higher re-use rate of the Athena pipeline compared to the NIAK may be due to the fact that it was released earlier, had the most comprehensive catalogue of derivatives and also used tools more popular in the fMRI community (FSL, AFNI) than NIAK (MINC). The Burner pipeline only generated derivatives of the structural data, which did not align well with the positioning of the ADHD200 competition. It should be noted that, with the approach we took, any direct comparison between Athena and NIAK was challenging, as the two pipelines did not use the same specific stereotaxic space, varied in every possible way in terms of selected parameters, and also had quite different approaches for QC or derivatives. There is no plan to expand or update the ADHD200 release as such, which we hope will continue to serve as a benchmark dataset. To the best of our knowledge, the ADHD200 preprocessed release was the first large public resource of preprocessed resting-state fMRI data, and remains to this date the only resource featuring a battery of alternative processing paths. 
+\par 
+The success of the ADHD200 preprocessed experiment illustrates the need for large-scale efforts to reduce computational barriers to participation in discovery neuroscience. This need is further emphasized by a recent survey of FCP/INDI users in which 70\% of the respondents indicated that the availability of statistical derivatives is either very important or absolutely critical to the neuroimaging community. Unfortunately, the Neuro Bureau’s efforts have been limited to a fraction of the datasets that are available through FCP and INDI due to funding and manpower limitations, and represent only a fraction of the statistical derivatives that can be derived from the data. A much larger-scale effort will be necessary to unlock the full potential of openly shared neuroimaging data to accelerate neuroimaging research. We are now working on new initiatives learning from the ADHD200 experiment, notably including better harmonized processing and quality control strategies. This could critically help fMRI researchers to identify optimal analytical paths for a specific task. 
+
+
+%% References
+%%
+%% Following citation commands can be used in the body text:
+%% Usage of \cite is as follows:
+%%   \cite{key}         ==>>  [#]
+%%   \cite[chap. 2]{key} ==>> [#, chap. 2]
+%%
+
+%% References with bibTeX database:
+
+\bibliographystyle{elsarticle-num}
+% \bibliographystyle{elsarticle-harv}
+% \bibliographystyle{elsarticle-num-names}
+% \bibliographystyle{model1a-num-names}
+% \bibliographystyle{model1b-num-names}
+% \bibliographystyle{model1c-num-names}
+% \bibliographystyle{model1-num-names}
+% \bibliographystyle{model2-names}
+% \bibliographystyle{model3a-num-names}
+% \bibliographystyle{model3-num-names}
+% \bibliographystyle{model4-names}
+% \bibliographystyle{model5-names}
+% \bibliographystyle{model6-num-names}
+
+\bibliography{adhd200_pubs}
+
+
+\end{document}
+
+%%
+%% End of file `elsarticle-template-num.tex'.
