@@ -28,7 +28,7 @@
 %% $Id: elsarticle-template-num.tex 4 2009-10-24 08:22:58Z rishi $
 %%
 %%
-\documentclass[preprint,12pt,3p]{elsarticle}
+\documentclass[preprint,12pt,5p]{elsarticle}
 \usepackage{rotating}
 
 
@@ -203,6 +203,16 @@ Shared preprocessed data and extracted features include:
 % PB->CC I did the breakdown by derivatives, not by pipeline. Otherwise there is too much repetition between NIAK and Athena. This is true for content description but even more for the methods section, where it's nice for example to have the different approaches for generating parcellations under one section, rather than disjointed into two "Athena" and "NIAK" sections. I've also left the details of the methods (e.g. resolution for resampling) to the methods section. 
 
 % I understand, but I am not sure that the repetition is bad. From my understanding, since this is essentially a data paper, we need to be very explicit about what data is available. the way it was before missed alot of useful details, i haven't removed your original content yet, just experimenting with an alternative approach. I would actually prefer it if we could put it into a table, but since what is available varies so much by pipeline, it would be a very lopsided table. Also, since most of the derivatives are pipeline specific, you are essentially breaking them down by derivatives. I think it would be better if the processing and 'contents' sections were merged.
+
+
+\begin{figure}[!t]
+\begin{center}
+  \includegraphics[width=0.5\textwidth]{Figure_01}
+  \caption{Derivatives from the Athena pipeline including ten intrinsic connectivity networks (ICNs), fractional amplitude of low-frequency fluctuations (fALFF) and regional homogeneity (ReHo). Asterisks (*) in the latter two derivatives denote the difference in colorbar max/min, as indicated.}
+  \label{fig_derivatives}
+\end{center}
+\end{figure}
+
 
 \subsection{Athena Pipeline} 
 The Athena pipeline\footnote{\url{http://www.nitrc.org/plugins/mwiki/index.php/neurobureau:AthenaPipeline}}  processed rs-fMRI and s-MRI images using a custom BASH script that combined AFNI \cite{cox1996afni} and FSL \cite{smith2004advances} neuroimaging toolkits. The processing scripts for each site are distributed in the repository, along with output log files for each processed dataset.
