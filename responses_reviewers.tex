@@ -80,7 +80,9 @@ Thank you.
 $\blacktriangleright$\emph{2. Regarding quality control, the NIAK pipeline output was carefully inspected to ensure that the pipeline itself worked properly. For example, parameter adjustments were made to improve registration in cases where the registration was poor. It appears that similar quality control, focusing on the pipeline performance (not raw data quality), was \emph{not} done for the Athena and Burner pipelines. Is this correct? If so, why not? I do not see any justification for accepting a pre-processing pipeline that might take good raw data and produce bad pre-processed data. The pre-processing pipeline is under the researcher's control, and it should be required to operate correctly. Note that I agree with your decision and reasoning not to exclude poor quality raw data. Raw data quality cannot always be fully controlled by the researcher, and low quality raw data must sometimes be accepted (eg: with difficult participant populations). Please clarify this issue.} 
 \end{quote}
 
-The reviewer is correct. In our original release of the ADHD200 preprocessed sample, no systematic visual assessment of brain registration had been implemented for the Athena pipeline. The main reason was the time constraints of the competition. We have implemented a systematic visual review of T1-template and T1-BOLD registrations for both NIAK and Athena, using an assessment protocol that is currently under development\footnote{\url{https://github.com/SIMEXP/niak_manual/raw/master/qc_manual_v1.0/qc_manual_niak.pdf}}. The reports for quality control have been made publicly available for Athena\footnote{\url{http://simexp.github.io/adhd200_qc_athena/index.html}} and NIAK\footnote{\url{http://simexp.github.io/adhd200_qc_niak/index.html}}. We have also released a spreadhseet including the QC status for each dataset, marked either \texttt{Fail}, in the presence of a major issue, or \texttt{Pass}. A subset of 220 subjects was graded independently by two raters, and the Cohen's kappa agreement was high (81\%) between them. The final status of a processed dataset was \texttt{Fail} if it was marked as such by one of the rater. The remaining 745 subjects were graded only once by one of the raters. In total, we evaluated 1165 subjects (accounting for 200 subjects evaluated twice), times 2 modalities, times 2 pipelines, for a grand total of $4740$ visual assessments of coregistration quality. The failure rate for Athena and NIAK were relatively low: 7\% and 5.2\%, respecively. We are planning to implement a more detailed evaluation of the registration performance as well the quality of raw data in follow up publications. 
+The reviewer is correct. In our original release of the ADHD200 preprocessed sample, no systematic visual assessment of brain registration had been implemented for the Athena pipeline. The main reason was the time constraints of the competition. We have implemented a systematic visual review of T1-template and T1-BOLD registrations for both NIAK and Athena, using an assessment protocol that is currently under development\footnote{\url{https://github.com/SIMEXP/niak_manual/raw/master/qc_manual_v1.0/qc_manual_niak.pdf}}. The reports for quality control have been made publicly available for Athena\footnote{\url{http://simexp.github.io/adhd200_qc_athena/index.html}} and NIAK\footnote{\url{http://simexp.github.io/adhd200_qc_niak/index.html}}. We have also released a spreadsheet including the QC status for each dataset, marked either \texttt{Fail}, in the presence of a major issue, or \texttt{Pass}. 
+\par 
+A subset of 220 subjects was graded independently by two raters, and the Cohen's kappa agreement was high (81\%) between them. The final status of a processed dataset was \texttt{Fail} if it was marked as such by one of the rater. The remaining 745 subjects were graded only once by one of the raters. In total, we evaluated 1165 subjects (accounting for 200 subjects evaluated twice), times 2 modalities, times 2 pipelines, for a grand total of $4740$ visual assessments of coregistration quality. The failure rate for Athena and NIAK were relatively low: 7\% and 5.2\%, respecively. We are planning to implement a more detailed evaluation of the registration performance as well the quality of raw data in follow up publications. 
 
 \begin{quote}
 $\blacktriangleright$\emph{3. page 2, line 9: Are the 26 "unknown" subjects from the Brown University site? If so, their diagnoses are known to the researchers who collected those data, but those diagnoses have not been publicly released. It would be clearer to describe these 26 as "diagnoses not publicly released" rather than "unknown". Similarly for page 3, line 46.}
@@ -117,7 +119,7 @@ Fixed (l. XX-XX).
 $\blacktriangleright$\emph{8.  Page 9, line 166: "For each data type a mean and standard deviation image ...": Does each data type mean just {s-MRI, rs-MRI} or does it also include the other derivative images (eg: fALFF maps, etc.)?}
 \end{quote}
 
-It includes all derivatives. The paragraph was edited to clarify this (l. XX-XX). 
+``Each data type'' includes all derivatives. The paragraph was edited to clarify this (l. XX-XX). 
 
 \begin{quote}
 $\blacktriangleright$\emph{9. Page 9, line 166-171: Were the z-score calculations done on the raw data, preprocessed data, or both?}
@@ -138,7 +140,7 @@ $\blacktriangleright$\emph{1. The efforts from Neuro Bureau described were extre
 }
 \end{quote}
 
-We added a paragraph at the beginning of "usage recommendation" (lines XX-XX) where we describe a few works that used ADHD-200 preprocessed. In their vast majority all these publications aimed at predicting clinical labels from brain data, either structurally with Burner or functionally with Athena/NIAK, or both. We pointed at different papers based on the derivatives they used. In addition, in the discussion (lines XX-XX), we referred to a handful of studies that combined ADHD-200 preprocessed to data samples from unrelated fields to evaluate statistical models, which we see as an important direction enabled by the ADHD-200 preprocessed initiative. 
+We added a paragraph at the beginning of "usage recommendation" (lines XX-XX) where we describe a few works that used ADHD-200 preprocessed. The vast majority of these publications aimed at predicting clinical labels from brain data, either structurally with Burner or functionally with Athena/NIAK, or both. We pointed at different papers based on the derivatives they used. In addition, in the discussion (lines XX-XX), we referred to a handful of studies that combined ADHD-200 preprocessed with data samples from unrelated fields to evaluate statistical models, which we see as an important direction enabled by the ADHD-200 preprocessed initiative. 
 
 
 \begin{quote}
@@ -159,7 +161,7 @@ $\blacktriangleright$\emph{3. In addition, it would be useful if the authors cou
 \end{center}
 \end{figure}
 
-Although there was clearly a peak in usage around the ADHD-200 Global competition, there has been a sustained amount of downloads and publications since then, see Figure \ref{fig:usage}, which we take as a demonstration of a long-term interest from the community in this resource.  We added this point in the discussion (l. XX-XX).
+Although there was clearly a peak in usage around the ADHD-200 Global competition, there has been a sustained amount of downloads and publications since then (Figure \ref{fig:usage}), which we take as a demonstration of a long-term interest from the community in this resource.  We added this point in the discussion (l. XX-XX).
 
 
 \begin{quote}
@@ -175,14 +177,14 @@ to go back to raw data (still available?), modify the processing scripts provide
 }
 \end{quote}
 
-We added a paragraph in the discussion (l. XX-XX) highlighting some of the key differences in the preprocessing parameters. We also discussed our choices re preprocessing strategies, and how this could be improved. Being an open community initiative, the NeuroBureau welcomes contributions from other groups. The NITRC site includes a discussion forum where any interested contributor can reach out to us. Six groups have contributed to our latest initiative, the ABIDE preprocessed, using this approach. The brainhack meeting series (Craddock et al., 2016) has also been instrumental to raise awareness and recruit new contributors. 
+We added a paragraph in the discussion (l. XX-XX) highlighting some of the key differences in the preprocessing parameters. We also discussed our choices re preprocessing strategies, and how this could be improved. Being an open community initiative, the NeuroBureau welcomes contributions from any interested research group. The NITRC site includes a discussion forum where any interested contributor can reach out to us. Six groups have contributed to our latest initiative, the ABIDE preprocessed, using this approach. The brainhack meeting series (Craddock et al., 2016) has also been instrumental to raise awareness and recruit new contributors. 
 
 \begin{quote}
 $\blacktriangleright$\emph{6. Some description of the "Neuro Bureau" would be helpful in the introduction - exactly who is this group, and what is their overall mission?
 }
 \end{quote}
 
-The Neuro Bureau is a non-profit organization registered in Germany and aimed at facilitating open science grassroots initiatives. See the following website\footnote{\url{http://www.neurobureau.org/mission-statement/}} for the full mission statement. We added these details in the introduction (l. XX-XX).  
+The Neuro Bureau is a non-profit organization and aimed at facilitating open science grassroots initiatives. See the following website\footnote{\url{http://www.neurobureau.org/mission-statement/}} for the full mission statement. We added these details in the introduction (l. XX-XX).  
 
 \begin{quote}
 $\blacktriangleright$\emph{ 7. There is a typo / grammatical error in Section 2 (p. 2) "This registration enables downloads to be tracked for usage statistics users to be contacted..."
